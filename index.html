@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+
+<title>Banca Brasileira</title>
+
+<meta name="description" content="Banca Brasileira plataforma online completa com acesso rápido, interface moderna e experiência otimizada para celular e computador.">
+<meta name="keywords" content="banca brasileira, banca brasileira online, plataforma brasileira, acesso banca brasileira">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="author" content="Banca Brasileira">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Banca Brasileira">
+<meta property="og:description" content="Plataforma Banca Brasileira online.">
+<meta property="og:locale" content="pt_BR">
+
+<meta name="theme-color" content="#111111">
+
+<link rel="canonical" href="https://bancabrasileirabet.bar">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html,
+body{
+width:100%;
+height:100%;
+overflow:hidden;
+background:#0d0d0d;
+font-family:Arial,sans-serif;
+}
+
+.topbar{
+
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:55px;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+background:rgba(0,0,0,.85);
+
+backdrop-filter:blur(8px);
+
+z-index:999;
+}
+
+.logo{
+
+color:white;
+font-size:22px;
+font-weight:700;
+letter-spacing:1px;
+
+}
+
+.iframe-container{
+
+position:fixed;
+
+top:55px;
+left:0;
+
+width:100%;
+height:calc(100% - 55px);
+
+}
+
+iframe{
+
+width:100%;
+height:100%;
+
+border:none;
+
+background:#fff;
+
+}
+
+.menu-btn{
+
+position:fixed;
+
+right:20px;
+bottom:20px;
+
+width:60px;
+height:60px;
+
+border:none;
+
+border-radius:50%;
+
+font-size:24px;
+
+cursor:pointer;
+
+z-index:1001;
+
+background:#ffd000;
+
+box-shadow:0 0 25px rgba(0,0,0,.4);
+
+}
+
+.menu{
+
+position:fixed;
+
+right:20px;
+bottom:95px;
+
+background:#111;
+
+border-radius:15px;
+
+padding:10px;
+
+display:none;
+
+flex-direction:column;
+
+gap:10px;
+
+z-index:1001;
+
+min-width:220px;
+
+box-shadow:0 0 30px rgba(0,0,0,.45);
+
+}
+
+.menu a{
+
+text-decoration:none;
+
+color:white;
+
+padding:12px;
+
+border-radius:10px;
+
+background:#1f1f1f;
+
+transition:.2s;
+
+}
+
+.menu a:hover{
+
+background:#333;
+
+}
+
+.show{
+
+display:flex;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header class="topbar">
+
+<div class="logo">
+
+Banca Brasileira
+
+</div>
+
+</header>
+
+
+<div class="iframe-container">
+
+<iframe
+
+src="https://app.bancabrasileira.com.br/pr/UBmDxM8X"
+
+loading="eager"
+
+allow="
+clipboard-read;
+clipboard-write;
+autoplay;
+fullscreen;
+payment;
+camera;
+microphone;
+geolocation;
+accelerometer;
+gyroscope;
+web-share"
+
+allowfullscreen
+
+referrerpolicy="no-referrer-when-downgrade">
+
+</iframe>
+
+</div>
+
+
+<div class="menu" id="menu">
+
+<a href="https://superbancas.app">SuperBancas</a>
+
+<a href="https://bancabrasileira.net.br">Banca Brasileira</a>
+
+<a href="https://tigerclub.net.br">Tiger Club</a>
+
+<a href="https://sorteclub.site">Sorte Club</a>
+
+</div>
+
+
+<button class="menu-btn" onclick="toggleMenu()">
+
+☰
+
+</button>
+
+<script>
+
+function toggleMenu(){
+
+document
+.getElementById("menu")
+.classList
+.toggle("show");
+
+}
+
+document.addEventListener("click",function(e){
+
+const menu=document.getElementById("menu");
+
+const btn=document.querySelector(".menu-btn");
+
+if(
+!menu.contains(e.target)
+&&
+!btn.contains(e.target)
+){
+
+menu.classList.remove("show");
+
+}
+
+});
+
+</script>
+
+</body>
+
+</html>
